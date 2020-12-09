@@ -1,7 +1,7 @@
 # Baekjoon Python Solutions
-> Study with Baekjoon Online Judge
+> Data Structures and Algorithms Study Codes
 >
->백준 파이썬 풀이 (아래 링크의 문제 순서대로)
+> 자료구조 및 알고리즘 공부: 백준 파이썬 풀이
 
 1. Stack
 https://www.acmicpc.net/problemset?sort=ac_desc&algo=71
