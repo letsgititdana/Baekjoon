@@ -11,3 +11,47 @@
 여러분은 입력으로 주어진 괄호 문자열이 VPS 인지 아닌지를 판단해서 그 결과를 YES 와 NO 로 나타내어야 한다.
 """
 
+import sys
+
+def valid_check(string):
+    check_list = []
+
+    for i in string:
+        if i == "(":
+            check_list.append(i)
+        elif i == ")":
+            if not check_list:
+                return False
+            else:
+                check_list.pop()
+
+    return True if not check_list else False
+
+
+n = int(sys.stdin.readline())
+
+for i in range(n):
+    string = sys.stdin.readline().strip()
+    print("YES" if valid_check(string) else "NO")
+
+
+""" 
+# 수행시간이 더 짧은 코드
+
+import sys
+n=int(sys.stdin.readline())
+for i in range(n):
+    chk=0
+    a=sys.stdin.readline().rstrip()
+    for j in range(len(a)):
+        if a[j]=='(':
+            chk+=1
+        else:
+            chk-=1
+            if chk==-1:
+                break
+    if chk==0:
+            print('YES')
+    else:
+            print('NO')
+"""
